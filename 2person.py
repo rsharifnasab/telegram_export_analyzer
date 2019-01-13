@@ -35,7 +35,7 @@ for meta in metas:
             #db[int(time[1:3])]+=1;
             if "name1" in sender.lower() : dbp1[int(time[1:3])]+=1
             elif "name2" in sender.lower() : dbp2[int(time[1:3])]+=1
-            else : print("error!")
+            else : print("forwarded message detected")
 
 out = open("out.txt", "w")
 out.write(final)
@@ -43,7 +43,7 @@ dbs = ""
 for i in range(24):
     if i <12 : hour = str(i) +" AM";
     else : hour = str(i-12) + " PM"
-    dbs = dbs + str(dbp1[i])+" : "+ hour+ "\n"
+    dbs = dbs + str(dbp1[i] + dbp2[i] )+" : "+ hour+ "\n"
     #dbs = dbs + str(dbp2[i])+" : "+ hour+ "\n"
 db_c = open("dbs.txt", "w")
 db_c.write(dbs)
