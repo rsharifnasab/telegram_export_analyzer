@@ -18,7 +18,7 @@ look at this:
 first line is commented!
 change it like this :
 ```py
-  #if "ali" in sender.lower() and "alavi" in sender.lower() :
+  if "ali" in sender.lower() and "alavi" in sender.lower() :
   db[int(time[1:3])]+=1;
 ```
 
